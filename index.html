@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rocket Animation</title>
+    <style>
+      .rocket {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 100px;
+      }
+
+      .body {
+        width: 50px;
+        height: 70px;
+        background-color: #eee;
+        border-radius: 25px 25px 10px 10px;
+      }
+
+      .window {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 50%;
+      }
+
+      .flame {
+        position: absolute;
+        bottom: 0;
+        left: 25%;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid red;
+        animation: flames 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes flames {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      body {
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rocket">
+      <div class="body"></div>
+      <div class="window"></div>
+      <div class="flame"></div>
+    </div>
+  </body>
+</html>
